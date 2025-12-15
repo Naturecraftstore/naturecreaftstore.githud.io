@@ -1,0 +1,240 @@
+
+        /* ---------- Global Styles ---------- */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f0f4f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ---------- SIDE IMAGES ---------- */
+        .side-img {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px; /* Width of side image container */
+            height: 250px; /* Height of side image container */
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .left-img { left: 10px; }
+        .right-img { right: 10px; }
+
+        .side-img img {
+            position: absolute;
+            width: 300%;
+            height: 150%;
+            object-fit: cover;
+            border-radius: 12px;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .right-img img {
+            transform: translateX(-20px);
+        }
+
+        .side-img img.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ---------- Logo ---------- */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+        }
+
+        /* ---------- Container Styles ---------- */
+        .container {
+            width: 90%;
+            max-width: 420px;
+            background: white;
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            display: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .container p, .container h4 {
+            text-align: center;
+            color: #444;
+        }
+
+        .step1 { display: block; }
+
+        /* ---------- Form Input ---------- */
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 10px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            outline: none;
+            transition: .2s;
+        }
+
+        .form-group input:focus {
+            border-color: #0077ff;
+        }
+
+        /* ---------- Buttons ---------- */
+        .nextButton, .verifyButton {
+            width: 100%;
+            border: none;
+            background: #0077ff;
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: .3s;
+        }
+
+        .nextButton:hover, .verifyButton:hover {
+            background: #005fcc;
+        }
+
+        /* ---------- OTP Boxes ---------- */
+        .otp-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .otp-group input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 22px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .otp-group input:focus {
+            border-color: #0077ff;
+        }
+
+        /* ---------- Step 3 Image ---------- */
+        .step3 img {
+            display: block;
+            width: 80px;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+
+        /* ---------- Brands Section ---------- */
+        .brands {
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        .small-container {
+            max-width: 1080px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .col-5 img {
+            width: 120px;
+            filter: grayscale(100%);
+            transition: .3s;
+        }
+
+        .col-5 img:hover {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            background: #111;
+            color: #fff;
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .footer h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+            flex-basis: 22%;
+            padding: 10px;
+        }
+
+        .footer img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .app-logo img {
+            width: 120px;
+            margin-right: 10px;
+        }
+
+        .footer .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer hr {
+            border: 0;
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            .side-img { display: none; }
+        }
+    

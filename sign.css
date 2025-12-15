@@ -1,0 +1,256 @@
+/* ---------- GLOBAL STYLES ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+/* ---------- MAIN SECTION ---------- */
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+/* LEFT IMAGE (SLIDESHOW) */
+#slide-image {
+    width: 100%;
+    max-width: 500px;
+    transition: opacity 0.8s ease-in-out;
+}
+
+#center-image {
+    width: 100%;
+    max-width: 500px;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.fade1 {
+    opacity: 0;
+}
+
+
+
+/* FADE EFFECT */
+.fade {
+    opacity: 0.2;
+}
+
+/* ---------- SIGN UP FORM ---------- */
+.signup-container {
+    width: 380px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #45a049;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- BRANDS SECTION ---------- */
+.brands {
+    background: #fff;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.small-container {
+    width: 90%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col-5 img {
+    width: 100px;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.col-5 img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #000;
+    color: #8a8a8a;
+    padding: 60px 20px 30px;
+    font-size: 14px;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer .container {
+    width: 90%;
+    margin: auto;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+    flex-basis: 22%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-col-2 img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer ul li:hover {
+    color: #fff;
+}
+
+.app-logo img {
+    width: 120px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+    color: #bbb;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-image img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .signup-container {
+        margin: 20px auto;
+    }
+
+    .footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-5 img {
+        margin-bottom: 20px;
+    }
+}

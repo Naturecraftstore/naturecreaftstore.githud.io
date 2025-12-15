@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.jpeg" alt="Nature Craft Store Logo" width="50"> Nature Craft Store
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Handmade.html">Handmade Craft</a></li>
+      <li><a href="product.html">Organic Beauty</a></li>
+      <li><a href="Fashion.html">Fashion</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Cart.html">Cart</a></li>
+      <li><a href="sign.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="product-detail">
+    <div class="product-images">
+      <div class="slider">
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <img id="main-image" src="" alt="Product Image">
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+      </div>
+      <div class="thumbnails" id="thumbnails"></div>
+    </div>
+    <div class="product-info">
+      <h1 id="product-title"></h1>
+      <p id="product-price"></p>
+      <p id="product-description"></p>
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="buy-now">Buy Now</button>
+    </div>
+  </div>
+</main>
+
+<script src="product-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="logo.jpeg">
+        Nature Craft Store
+    </div>
+
+    <!-- IMAGE LEFT + SIGNUP RIGHT -->
+    <div class="main-section">
+
+        <!-- LEFT IMAGE SLIDESHOW -->
+        <div class="left-image">
+            <img id="slide-image" src="images/LS1.png" alt="Slideshow Image">
+        </div>
+        <div class="center-image">
+            <img id="center-image" src="images/images(3).jpg" alt="Slideshow Image"></div>
+
+        <!-- SIGNUP FORM -->
+        <div class="signup-container">
+            <h2>Create Account</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="mail.html">Log In</a></p>
+        </div>
+    </div>
+
+    <!-- BRANDS SECTION -->
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5"><img src="images/logo-goorej.jpeg"></div>
+                <div class="col-5"><img src="images/logo-oppo.jpeg"></div>
+                <div class="col-5"><img src="images/logo-coca.jpeg"></div>
+                <div class="col-5"><img src="images/logo-paypal.jpeg"></div>
+                <div class="col-5"><img src="images/logo-philips.jpeg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phones.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.jpeg">
+                        <img src="images/app1-store.jpeg">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+                    <img src="logo.jpeg">
+                    <p>Our Purpose is to sustainably make the pleasure and benefits
+                        of sports accessible to the many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+            <p class="copyright">Copyright 2025 - Easy Tutorials</p>
+        </div>
+    </div>
+
+    <!-- SLIDESHOW SCRIPT -->
+    <script>
+    // First slideshow for slide-image
+    let images = [
+        "images/RP1.jpeg",
+        "images/ncss1.jpeg",
+        "images/RS1.jpeg"
+    ];
+
+    let index = 0;
+    const slideImage = document.getElementById("slide-image");
+
+    function changeSlideImage() {
+        slideImage.classList.add("fade");
+        setTimeout(() => {
+            index = (index + 1) % images.length;
+            slideImage.src = images[index];
+            slideImage.classList.remove("fade");
+        }, 800);
+    }
+
+    setInterval(changeSlideImage, 2000);
+
+    // Second slideshow for center-image
+    let image = [
+        "images/image(2).jpg",
+        "images/TS1.jpeg",
+        "images/ncss1.jpeg"
+    ];
+
+    let index1 = 0;
+    const centerImage = document.getElementById("center-image");
+
+    function changeCenterImage() {
+        centerImage.classList.add("fade1");
+        setTimeout(() => {
+            index1 = (index1 + 1) % image.length;
+            centerImage.src = image[index1];
+            centerImage.classList.remove("fade1");
+        }, 800);
+    }
+
+    setInterval(changeCenterImage, 2000);
+</script>
+
+</body>
+</html>
